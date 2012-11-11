@@ -1,16 +1,5 @@
 /*
-    Universidade Federal de Santa Maria
-    Centro de Educação Superior Norte do Rio Grande do Sul
-    Curso de Sistemas de Informação
-    Disciplina: Circuitos Digitais
-    
-    Aluno: Kelvin Salton do Prado e Mauro André Murari
-    
     Exemplo funcional de um Display de 7 segmentos.
-    
-    Obs.: Para compilar o código tem que ter instalado a biblioteca
-    gráfica Allegro e compilar como projeto.
-    
 */
 
 #include <allegro.h>
@@ -30,12 +19,12 @@ void deinit();
 
 int main() 
 {
-//  ### Resolução da tela ###
+//  ### Resoluï¿½ï¿½o da tela ###
     int resolucao_x = 320;
     int resolucao_y = 400;
 //  #########################
 
-//  ### Posições do Display ###
+//  ### Posiï¿½ï¿½es do Display ###
     bool a = false; 
     bool b = false; 
     bool c = false; 
@@ -45,9 +34,9 @@ int main()
     bool g = false; 
 //  ###########################  
   
-	init(resolucao_x, resolucao_y); // Chama a função que inicializa o modo gráfico do Allegro;
+	init(resolucao_x, resolucao_y); // Chama a funï¿½ï¿½o que inicializa o modo grï¿½fico do Allegro;
 
-    BITMAP *buffer = create_bitmap(resolucao_x,resolucao_y); // Cria uma área virtual;
+    BITMAP *buffer = create_bitmap(resolucao_x,resolucao_y); // Cria uma ï¿½rea virtual;
     
     rectfill(buffer, 0, 0, resolucao_x, resolucao_y, makecol(BRANCO)); // Borda externa;
     rectfill(buffer, 3, 3, resolucao_x-4, resolucao_y-4, makecol(PRETO)); // Borda externa;
@@ -63,7 +52,7 @@ int main()
     rectfill(buffer, 114, 106, 194, 112, makecol(VERMELHO_ESCURO)); // g;
 //  ##########################################################
 
-//  ################# - Cria os Botões - #####################
+//  ################# - Cria os Botï¿½es - #####################
     rect(buffer, 84, 244, 102, 262, makecol(BRANCO));
     textout(buffer, font, "0", 90, 250, makecol(VERDE));
     
@@ -144,10 +133,10 @@ int main()
 		textout(buffer,font,"Display de 7 Segmentos",66,14,makecol(ROSA));
 		textout(buffer,font,"Clique no valor ou letra desejada",22,218,makecol(ROSA));
 		
-// ############## - Testa Posição Clicada e Mostra Valor Correspondente - ##################################		
-        if (mouse_b & 1) // Testa se foi pressionado o botão esquerdo do mouse;
+// ############## - Testa Posiï¿½ï¿½o Clicada e Mostra Valor Correspondente - ##################################		
+        if (mouse_b & 1) // Testa se foi pressionado o botï¿½o esquerdo do mouse;
         {
-              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 246 && mouse_y <= 262 ) // Posição 0
+              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 246 && mouse_y <= 262 ) // Posiï¿½ï¿½o 0
               { 
                    a = true; 
                    b = true; 
@@ -158,7 +147,7 @@ int main()
                    g = false;
               }
               else 
-              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 246 && mouse_y <= 262 ) // Posição 1
+              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 246 && mouse_y <= 262 ) // Posiï¿½ï¿½o 1
               {
                    a = false; 
                    b = true; 
@@ -169,7 +158,7 @@ int main()
                    g = false;
               }
               else
-              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 246 && mouse_y <= 262 ) // Posição 2
+              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 246 && mouse_y <= 262 ) // Posiï¿½ï¿½o 2
               {
                    a = true; 
                    b = true; 
@@ -180,7 +169,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 246 && mouse_y <= 262 ) // Posição 3
+              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 246 && mouse_y <= 262 ) // Posiï¿½ï¿½o 3
               {
                    a = true; 
                    b = true; 
@@ -191,7 +180,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 246 && mouse_y <= 262 ) // Posição 4
+              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 246 && mouse_y <= 262 ) // Posiï¿½ï¿½o 4
               {
                    a = false; 
                    b = true; 
@@ -202,7 +191,7 @@ int main()
                    g = true;
               }     
               else
-              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 278 && mouse_y <= 292 ) // Posição 5
+              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 278 && mouse_y <= 292 ) // Posiï¿½ï¿½o 5
               {
                    a = true; 
                    b = false; 
@@ -213,7 +202,7 @@ int main()
                    g = true;
               }
               else 
-              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 278 && mouse_y <= 292 ) // Posição 6
+              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 278 && mouse_y <= 292 ) // Posiï¿½ï¿½o 6
               {
                    a = true; 
                    b = false; 
@@ -224,7 +213,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 278 && mouse_y <= 292 ) // Posição 7
+              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 278 && mouse_y <= 292 ) // Posiï¿½ï¿½o 7
               {
                    a = true; 
                    b = true; 
@@ -235,7 +224,7 @@ int main()
                    g = false;
               }
               else
-              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 278 && mouse_y <= 292 ) // Posição 8
+              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 278 && mouse_y <= 292 ) // Posiï¿½ï¿½o 8
               {
                    a = true; 
                    b = true; 
@@ -246,7 +235,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 278 && mouse_y <= 292 ) // Posição 9
+              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 278 && mouse_y <= 292 ) // Posiï¿½ï¿½o 9
               {
                    a = true; 
                    b = true; 
@@ -257,7 +246,7 @@ int main()
                    g = true;
               }   
               else
-              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 306 && mouse_y <= 320 ) // Posição A
+              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 306 && mouse_y <= 320 ) // Posiï¿½ï¿½o A
               {
                    a = true; 
                    b = true; 
@@ -268,7 +257,7 @@ int main()
                    g = true;
               }
               else 
-              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 306 && mouse_y <= 320 ) // Posição b
+              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 306 && mouse_y <= 320 ) // Posiï¿½ï¿½o b
               {
                    a = false; 
                    b = false; 
@@ -279,7 +268,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 306 && mouse_y <= 320 ) // Posição C
+              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 306 && mouse_y <= 320 ) // Posiï¿½ï¿½o C
               {
                    a = true; 
                    b = false; 
@@ -290,7 +279,7 @@ int main()
                    g = false;
               }
               else
-              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 306 && mouse_y <= 320 ) // Posição d
+              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 306 && mouse_y <= 320 ) // Posiï¿½ï¿½o d
               {
                    a = false; 
                    b = true; 
@@ -301,7 +290,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 306 && mouse_y <= 320 ) // Posição E
+              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 306 && mouse_y <= 320 ) // Posiï¿½ï¿½o E
               {
                    a = true; 
                    b = false; 
@@ -312,7 +301,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 336 && mouse_y <= 352 ) // Posição F
+              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 336 && mouse_y <= 352 ) // Posiï¿½ï¿½o F
               {
                    a = true; 
                    b = false; 
@@ -323,7 +312,7 @@ int main()
                    g = true;
               }
               else 
-              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 336 && mouse_y <= 352 ) // Posição H
+              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 336 && mouse_y <= 352 ) // Posiï¿½ï¿½o H
               {
                    a = false; 
                    b = true; 
@@ -334,7 +323,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 336 && mouse_y <= 352 ) // Posição I
+              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 336 && mouse_y <= 352 ) // Posiï¿½ï¿½o I
               {
                    a = false; 
                    b = true; 
@@ -345,7 +334,7 @@ int main()
                    g = false;
               }
               else
-              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 336 && mouse_y <= 352 ) // Posição L
+              if ( mouse_x >= 176 && mouse_x <= 190 && mouse_y >= 336 && mouse_y <= 352 ) // Posiï¿½ï¿½o L
               {
                    a = false; 
                    b = false; 
@@ -356,7 +345,7 @@ int main()
                    g = false;
               }
               else
-              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 336 && mouse_y <= 352 ) // Posição O
+              if ( mouse_x >= 206 && mouse_x <= 220 && mouse_y >= 336 && mouse_y <= 352 ) // Posiï¿½ï¿½o O
               {
                    a = true; 
                    b = true; 
@@ -367,7 +356,7 @@ int main()
                    g = false;
               }   
               else
-              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 366 && mouse_y <= 381 ) // Posição P
+              if ( mouse_x >= 86 && mouse_x <= 100 && mouse_y >= 366 && mouse_y <= 381 ) // Posiï¿½ï¿½o P
               {
                    a = true; 
                    b = true; 
@@ -378,7 +367,7 @@ int main()
                    g = true;
               }
               else 
-              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 366 && mouse_y <= 381 ) // Posição S
+              if ( mouse_x >= 116 && mouse_x <= 130 && mouse_y >= 366 && mouse_y <= 381 ) // Posiï¿½ï¿½o S
               {
                    a = true; 
                    b = false; 
@@ -389,7 +378,7 @@ int main()
                    g = true;
               }
               else
-              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 366 && mouse_y <= 381 ) // Posição U
+              if ( mouse_x >= 146 && mouse_x <= 160 && mouse_y >= 366 && mouse_y <= 381 ) // Posiï¿½ï¿½o U
               {
                    a = false; 
                    b = true; 
@@ -400,13 +389,13 @@ int main()
                    g = false;
               } 
               else
-              if ( mouse_x >= 176 && mouse_x <= 222 && mouse_y >= 366 && mouse_y <= 381 ) // Posição Exit
+              if ( mouse_x >= 176 && mouse_x <= 222 && mouse_y >= 366 && mouse_y <= 381 ) // Posiï¿½ï¿½o Exit
               {
                   deinit();
                   return 0;
               }
               
-              // @@@@@@@@@@@@@@@@@@@@ - Testa as Posições e Manda pro buffer - @@@@@@@@@@@@@@@@@@
+              // @@@@@@@@@@@@@@@@@@@@ - Testa as Posiï¿½ï¿½es e Manda pro buffer - @@@@@@@@@@@@@@@@@@
               if ( a == true )
                   rectfill(buffer, 114, 50, 194, 56, makecol(VERMELHO)); // a;
               else
@@ -447,7 +436,7 @@ int main()
 		
         draw_sprite (screen, buffer, 0, 0); // Mostra o buffer na tela;
         
-	} // Fim do "while", laço principal;
+	} // Fim do "while", laï¿½o principal;
 
 	deinit();
 	return 0;
@@ -455,8 +444,8 @@ int main()
 END_OF_MAIN();
 
 
-void init(int resolucao_x, int resolucao_y) // Inicializa os modos gráficos do allegro;
-{    // Inicializa funções gráficas do allegro;
+void init(int resolucao_x, int resolucao_y) // Inicializa os modos grï¿½ficos do allegro;
+{    // Inicializa funï¿½ï¿½es grï¿½ficas do allegro;
 	allegro_init();
 	set_color_depth(32); // Define 32 bits de cores;
 	set_gfx_mode(GFX_AUTODETECT_WINDOWED, resolucao_x, resolucao_y, 0, 0); // Detecta a placa de video e define o tamanho da tela;
