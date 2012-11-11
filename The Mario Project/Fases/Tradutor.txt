@@ -1,0 +1,24 @@
+Tradutor de mapas
+
+: = Espaço em branco;
+# = Cano verde boca
+* = cano verde
+$ = cano Roxo boca
+! = cano Roxo
+
+0 = Chão com borda esquerda em cima;
+1 = Chão com borda esquerda em baixo;
+2 = Chão com borda esquerda em cima e em baixo;
+3 = Chão com borda Esquerda;
+
+4 = Chão com borda meio em cima;
+5 = Chão com borda meio em baixo;
+6 = Chão com borda meio em cima e embaixo;
+7 = Chão com borda Direita;
+
+8 = Chão com borda direita em cima;
+9 = Chão com borda direita em baixo;
++ = Chão com borda direita em cima e embaixo;
+~ = Agua com onda;
+
+= = Chão normal sem borda;
